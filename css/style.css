@@ -27,6 +27,7 @@ main {
 .container {
    max-width: 1200px;
    margin: 0 auto;
+   padding: 40px 0;
 }
 
 .bg-pink {
@@ -38,30 +39,25 @@ main {
 
 /* SECTION 1 */
 .main-title {
-   display: flex;
 	position: fixed;
    background: #e8e8e8;
-   width: 100%;
 	top: 0;
 	left: 0;
+   right: 0;
    z-index: 1;
    font-size: 5rem;
    font-weight: 700;
    color: red;
-   align-items: center;
-   justify-content: center;
+   text-align: center;
    text-transform: uppercase;
    padding: 20px;
 }
 
 .title-logo {
-   margin-bottom: 20px;
-   padding: 100px 0 20px 0;
+   padding: 80px 0 0 0;
 }
 
 .logo {
-   display: flex;
-   justify-content: center;
    width: 760px;
    position: relative;
 }
@@ -76,18 +72,15 @@ main {
 .hidden-logo {
 	display: none;
 	position: absolute;
-   overflow: hidden;
-   top: 0;
+   top: 50%;
 	left: 0;
 	background: #e8e8e8d6;
 	color: black;
    padding: 20px;
-   margin: 0 auto;
    font-size: 2.4rem;
    text-align: center;
-   line-height: 36px;
-   margin-top: 155px;
-   cursor: pointer;
+   line-height: 3.6rem;
+   margin-top: -100px;
 }
 
 .logo:hover .hidden-logo {
@@ -103,21 +96,20 @@ main {
    color: red;
    text-align: center;
    text-transform: uppercase;
-   padding: 20px 20px 40px 20px;
+   margin-bottom: 40px;
 }
 
 .container-items {
    display: flex;
    justify-content: center;
-   column-gap: 40px;
+   gap: 40px;
    flex-wrap: wrap;
 }
 
 .item {
    position: relative;
-   width: 360px;
+   flex: 1 1 30%;
    padding: 20px;
-   margin-bottom: 40px;
    text-align: center;
    font-size: 2.1rem;
    line-height: 2.5rem;
@@ -128,11 +120,7 @@ main {
 }
 
 .image-item {
-   height: 360px;
-}
-
-.item img {
-   height: auto;
+   height: 100%;
    width: 100%;
    object-fit: cover;
 }
@@ -142,18 +130,17 @@ main {
 /* У меня не получилось расположить текст по центру в Hidden.  Как сделать чтобы он был по центру контейнера, даже если текста недостаточно */
 
 .hidden {
-	cursor: pointer;
    display: none;
 	position: absolute;
    overflow: hidden;
    width: 100%;
    height: 200px;
-   top: 0;
+   top: 50%;
 	left: 0;
 	background: rgba(255, 0, 0, 0.5);
 	color: white;
    padding: 10px;
-   margin-top: 125px;
+   margin-top: -100px;
 }
 
 .item:hover .hidden {
@@ -165,25 +152,23 @@ main {
 /* Position FIXED */
 
 .menu-left {
-   display: inline-block;
    background: rgba(255, 255, 255, 0.5);
 	position: fixed;
 	top: 50%;
 	left: 0;
-}
-
-.menu-left li {
-   padding: 20px 30px;
+   margin-top: -150px;
 }
 
 .menu-left li:hover {
    background: rgba(255, 0, 0, 0.4);
 }
 
-.menu-left a {
+.menu-left li a {
    text-decoration: none;
+   display: block;
    color: black;
    font-size: 2rem;
+   padding: 20px 30px;
 }
 
 
